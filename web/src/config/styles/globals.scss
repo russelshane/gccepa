@@ -12,10 +12,12 @@
 .headline {
   background: -webkit-linear-gradient(0deg, #21463e -20%, #7c9b9c 120%);
   -webkit-background-clip: text; /* apply background clip */
+  background-clip: text; /* apply background clip */
   -webkit-text-fill-color: transparent;
 }
 
 .blob-1 {
+  display: none;
   position: fixed;
   width: 280px;
   height: 280px;
@@ -25,9 +27,11 @@
   left: 0;
   margin-left: -80px;
   background-image: url(https://ik.imagekit.io/drs/crowdpilot/assets/blob-1_3WnAV_JZW.png?updatedAt=1710352537116);
+  z-index: -0;
 }
 
 .blob-2 {
+  display: none;
   position: fixed;
   width: 380px;
   height: 280px;
@@ -37,6 +41,7 @@
   right: 0;
   margin-right: -150px;
   background-image: url(https://ik.imagekit.io/drs/crowdpilot/assets/blob-2_5TyQprbir.png?updatedAt=1710352537085);
+  z-index: -0;
 }
 
 .search-modal {
