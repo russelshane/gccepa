@@ -6,7 +6,7 @@
 </a>
 </div>
 
-# Frontend
+# CrowdPilot
 
 CrowdPilot is the product of the months-long collaborative effort for the Community Extension Participation Attendance project.
 
