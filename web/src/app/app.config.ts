@@ -14,6 +14,7 @@ import {
   LockKeyhole,
   Plus,
   SquareCheck,
+  Users,
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -26,6 +27,7 @@ export const appConfig: ApplicationConfig = {
         CalendarSearch,
         UserRound,
         Mail,
+        Users,
         SquareAsterisk,
         MoveRight,
         LockKeyhole,
