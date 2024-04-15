@@ -4,6 +4,7 @@ import { HeroComponent } from '../../ui/hero/hero.component';
 import { SearchComponent } from '../../ui/search/search.component';
 import { RouterLink } from '@angular/router';
 import { SpotlightComponent } from '../../ui/spotlight/spotlight.component';
+import { BillboardComponent } from '../../ui/billboard/billboard.component';
 
 @Component({
   selector: 'app-landing',
@@ -13,6 +14,7 @@ import { SpotlightComponent } from '../../ui/spotlight/spotlight.component';
     HeroComponent,
     SearchComponent,
     SpotlightComponent,
+    BillboardComponent,
     RouterLink,
   ],
   templateUrl: './landing.component.html',
