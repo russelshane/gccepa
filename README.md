@@ -1,14 +1,14 @@
 <div style="margin: 40px 0;">
 <a href="https://crowdpilot.app">
   <p align="center">
-   <img style="width: 300px; object-fit: cover;" src="https://ik.imagekit.io/drs/crowdpilot/assets/Logo%20Accent%20SVG%20CrowdPilot_9EaH70mmS.svg?updatedAt=1710340228811" />
+   <img style="width: 100%; object-fit: cover;" src="https://ik.imagekit.io/drs/crowdpilot/assets/crowdpilot-figma-prototype-preview_VopNQ8Mc3.png?updatedAt=1716809136526" />
   </p>
 </a>
 </div>
 
-# CrowdPilot
+# About
 
-CrowdPilot is the product of the months-long collaborative effort for the Community Extension Participation Attendance project.
+CrowdPilot, presented as "crowdpilot." is the product of the months-long collaborative effort for the Community Extension Participation Attendance project.
 
 Our team decided to take the step further and build our application with features extending the attendance-only functionality for our institution to have a centralized platform on managing personalized community experiences.
 
