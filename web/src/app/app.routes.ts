@@ -8,6 +8,7 @@ import { UploadProfileComponent } from './pages/sign-up/upload-profile/upload-pr
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ExperienceComponent } from './pages/experience/experience.component';
 
 export const routes: Routes = [
   // Landing page route. Do not add components inside the app
@@ -19,6 +20,10 @@ export const routes: Routes = [
   {
     path: 'experiences',
     component: ExperiencesComponent,
+  },
+  {
+    path: 'experience/:id',
+    component: ExperienceComponent,
   },
   {
     path: 'features',
