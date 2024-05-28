@@ -1,4 +1,45 @@
 <!-- Masthead Component -->
 <app-masthead />
 
-<p>experiences works!</p>
+<div class="p-6 max-w-6xl mx-auto min-h-40">
+  <h1 class="text-2xl font-bold text-cambridge">Experiences</h1>
+  <div class="grid grid-cols-1">
+    <div *ngFor="let experience of experiences">
+      <section class="w-full max-w-4xl mx-auto my-20 flex flex-col gap-5">
+        <div class="w-full bg-none flex gap-6 justify-between h-fit">
+          <img
+            src="https://wish1075.com/wp-content/uploads/2019/08/15_December-Avenue_Wish-365-Concert.jpg"
+            alt="December Avenue Concert.png"
+            class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory"
+          />
+          <div class="basis-2/4 flex flex-col gap-4">
+            <span class="text-sm font-semibold text-ash">{{
+              experience.location
+            }}</span>
+            <h1 class="text-3xl font-bold text-cambridge">
+              {{ experience.title }}
+            </h1>
+            <p class="text-sm text-ash">
+              {{ experience.description }}
+            </p>
+            <div class="labels flex gap-2 items-center">
+              <lucide-icon
+                name="users"
+                class="text-gulf size-3.5 font-bold"
+              ></lucide-icon>
+              <span class="text-sm text-ash font-semibold">{{
+                experience.attendance.expected
+              }}</span>
+            </div>
+            <button
+              class="bg-ivory p-3 rounded-md text-asphalt text-sm w-44 gap-1 font-semibold flex justify-center items-center"
+              [routerLink]="['/experience', experience.id]"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
