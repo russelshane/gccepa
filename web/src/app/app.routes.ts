@@ -7,9 +7,10 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { UploadProfileComponent } from './pages/sign-up/upload-profile/upload-profile.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
-  // Landing page route. Do not add components inside to the app
+  // Landing page route. Do not add components inside the app
   // component other than the application router.
   {
     path: '',
@@ -34,6 +35,10 @@ export const routes: Routes = [
   {
     path: 'sign-up/continue',
     component: UploadProfileComponent,
+  },
+  {
+    path: 'sign-in',
+    component: LoginComponent,
   },
   {
     path: 'auth/forgot-password',
