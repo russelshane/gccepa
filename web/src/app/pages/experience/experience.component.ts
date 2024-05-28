@@ -4,15 +4,26 @@ import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { experiences } from '../experiences/experiences.component';
+import { ModalService } from '../../services/modal.service';
+import { ModalComponent } from '../../ui/modal/modal.component';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [MastheadComponent, CommonModule, LucideAngularModule, RouterLink],
+  imports: [
+    MastheadComponent,
+    CommonModule,
+    LucideAngularModule,
+    RouterLink,
+    ModalComponent,
+  ],
   templateUrl: './experience.component.html',
 })
 export class ExperienceComponent {
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    protected modalService: ModalService
+  ) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
