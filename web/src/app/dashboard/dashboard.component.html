@@ -1,116 +1,59 @@
 <!-- Dashboard Component -->
 <!-- Dashboard header -->
 <header class="w-full flex justify-center">
-     <div
-       class="py-6 px-6 flex gap-4 max-w-6xl w-full h-24 items-center justify-between xl:px-0"
-     >
-       <div class="flex gap-4 items-center">
-         <img
-           src="https://ik.imagekit.io/drs/crowdpilot/assets/Logo%20Accent%20SVG%20CrowdPilot_9EaH70mmS.svg?updatedAt=1710340228811"
-           alt="Join and create personalized community experiences."
-           class="w-48 object-contain cursor-pointer hover:opacity-75"
-         />
-         <nav class="mx-3 hidden lg:block">
-           <ul
-             class="p-0 m-0 list-none text-asphalt flex gap-3 cursor-pointer font-semibold text-sm"
-           >
-             <li class="hover:text-eucalyptus">Dashboard</li>
-             <li class="hover:text-eucalyptus">
-               My Experiences
-             </li>
-             <li class="hover:text-eucalyptus">
-               Calendar
-             </li>
-             <li>
-             <button
-             class="bg-hampton py-1 px-9 text-asphalt text-sm rounded-md hover:opacity-85 hidden lg:block"
-           >
-             + Create
-           </button>
-            </li>
-           </ul>
-         </nav>
-       </div>
-       <div class="flex gap-4 items-center">
-
-        <!--message button -->
-      <button
-        class="w-8 h-8 rounded-full bg-backdrop flex items-center justify-center cursor-pointer bg-hampton"
+  <div
+    class="flex gap-4 max-w-6xl w-full h-24 items-center justify-between xl:px-0"
+  >
+    <div class="flex gap-4 items-center">
+      <img
+        routerLink="/"
+        src="https://ik.imagekit.io/drs/crowdpilot/assets/Logo%20Accent%20SVG%20CrowdPilot_9EaH70mmS.svg?updatedAt=1710340228811"
+        alt="Join and create personalized community experiences."
+        class="w-48 object-contain cursor-pointer hover:opacity-75"
+      />
+      <nav class="mx-3 hidden lg:block items-center">
+        <ul
+          class="p-0 m-0 list-none text-asphalt flex items-center gap-6 cursor-pointer font-semibold text-sm"
         >
-          <lucide-icon name="" class="text-black size-6"></lucide-icon>
-      </button>
-
-      <!--notification button -->
+          <li routerLink="/dashboard" class="hover:text-eucalyptus">
+            Dashboard
+          </li>
+          <li class="hover:text-eucalyptus">My Experiences</li>
+          <li class="hover:text-eucalyptus">Calendar</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex gap-2 items-center">
       <button
-      class="w-8 h-8 rounded-full bg-backdrop flex items-center justify-center cursor-pointer bg-hampton"
+        class="py-4 px-8 text-sm font-semibold items-center rounded-sm bg-ivory"
       >
-        <lucide-icon name="" class="text-black size-6"></lucide-icon>
-    </button>
-
-    <!--profile button --> 
-     <button
-      class="w-8 h-8 rounded-full bg-backdrop flex items-center justify-center cursor-pointer bg-ivory"
-      >
-      <lucide-icon name="" class="text-white size-6"></lucide-icon>
-     </button>
-       </div> 
-     </div>
-   </header>
-   
-   <div class="sidebar">
-    <ul
-      class="p-0 m-0 list-none text-asphalt flex flex-col gap-3 cursor-pointer font-semibold text-sm"
-    >
-      <!--DASHBOARD -->
-      <li class="hover:text-eucalyptus">
-        <button>
-          <lucide-icon name="layout-dashboard" class="text-black size-6">dashboard</lucide-icon>
-        </button>
-      </li>
-  
-      <!--Gauge-->
-      <li class="hover:text-eucalyptus">
-        <button>
-          <lucide-icon name="gauge" class="text-black size-6">gauge</lucide-icon>
-        </button>
-      </li>
-  
-      <!--Calendar --> 
-      <li class="hover:text-eucalyptus">
-        <button>
-          <lucide-icon name="calendar-days" class="text-black size-6">calendar</lucide-icon>
-        </button>
-      </li>
-      
-      <!--Star-->
-      <li class="hover:text-eucalyptus">
-        <button>
-          <lucide-icon name="star" class="text-black size-6">Star </lucide-icon>
-        </button>
-      </li>
-    </ul>
+        Sign Out
+      </button>
+    </div>
   </div>
+</header>
 
-   <!--Dashboard section -->
-<section class="w-full max-w-4xl mx-auto my-20 flex flex-col gap-5">
+<!--Dashboard section -->
+<section class="w-full max-w-6xl mx-auto my-10 flex flex-col gap-5">
   <h1 class="text-3xl font-bold text-cambridge">Dashboard</h1>
- <div class="w-full bg-none flex gap-6 justify-between h-fit">
-   <div class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory">
-
+  <div class="w-full bg-none flex gap-6 h-fit">
+    <button
+      class="py-4 px-8 text-sm font-semibold items-center rounded-sm bg-hampton"
+    >
+      Create New Experience
+    </button>
+    <button
+      class="py-4 px-8 text-sm font-semibold items-center rounded-sm bg-ivory"
+    >
+      View Your Calendar
+    </button>
   </div>
- </div>
-</section>
 
-<section class="w-full max-w-4xl mx-auto my-20 flex flex-col gap-5">
-  <div>
+  <span class="w-full h-1 bg-backdrop my-10"></span>
   <h1 class="text-3xl font-bold text-cambridge">Your Programs</h1>
-  <button
-  class="bg-ivory py-1 px-9 text-asphalt text-sm rounded-md hover:opacity-85 hidden lg:block"
->
- <lucide-icon name="" class="text-black size-6">Filter</lucide-icon>
-</button>
+  <div class="w-full bg-none flex gap-6 justify-between h-fit">
+    <div
+      class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory"
+    ></div>
   </div>
- <div>
-  
- </div>
 </section>

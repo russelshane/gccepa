@@ -5,9 +5,7 @@ import { LucideAngularModule } from 'lucide-angular';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [LucideAngularModule, RouterLink],
+  imports: [RouterLink, LucideAngularModule],
   templateUrl: './dashboard.component.html',
 })
-export class DashboardComponent {
-
-}
+export class DashboardComponent {}

@@ -8,18 +8,6 @@
 
     <!-- Inputs -->
     <div class="w-full gap-2 flex flex-col">
-      <!-- Full Name Text Input -->
-      <div
-        class="p-4 rounded-md w-full border-muted border-2 flex items-center gap-2"
-      >
-        <lucide-icon name="user-round" class="text-muted"></lucide-icon>
-        <input
-          type="text"
-          placeholder="Full Name"
-          class="h-full w-full outline-none text-asphalt text-lg"
-        />
-      </div>
-
       <!-- Email Text Input -->
       <div
         class="p-4 rounded-md w-full border-muted border-2 flex item-center gap-2"
@@ -43,31 +31,20 @@
           class="h-full w-full outline-none text-asphalt text-lg"
         />
       </div>
-
-      <!-- Confirm Password -->
-      <div
-        class="p-4 rounded-md w-full border-muted border-2 flex item-center gap-2"
-      >
-        <lucide-icon name="square-asterisk" class="text-muted"></lucide-icon>
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          class="h-full w-full outline-none text-asphalt text-lg"
-        />
-      </div>
     </div>
     <!-- Continue Button -->
     <button
       class="w-full flex justify-center items-center gap-2 rounded-md bg-hampton p-4 text-lg text-cambridge font-medium"
+      routerLink="/dashboard"
     >
-      Continue
+      Sign In
       <lucide-icon name="move-right" class="text-cambridge"></lucide-icon>
     </button>
     <p
       class="text-sm font-semibold text-cambridge cursor-pointer"
       routerLink="/"
     >
-      Cancel Sign-Up
+      Cancel
     </p>
   </div>
 </div>
