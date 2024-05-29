@@ -6,7 +6,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { UploadProfileComponent } from './pages/sign-up/upload-profile/upload-profile.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 
