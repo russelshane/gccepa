@@ -1,8 +1,19 @@
 <section class="w-full max-w-4xl mx-auto my-20 flex flex-col gap-5">
   <h1 class="text-2xl text-cambridge font-bold">{{ heading }}</h1>
   <div class="grid gap-5 grid-cols-3">
-    <div class="w-full h-80 bg-ivory"></div>
-    <div class="w-full h-80 bg-ivory"></div>
-    <div class="w-full h-80 bg-ivory"></div>
+    <div class="w-full h-80 bg-backdrop p-6 flex flex-col gap-4 rounded-md" *ngFor="let events of events">
+      <img src="{{events.imageUrl}}" class="object-cover w-full h-24 rounded-md" alt="{{events.title}}" />
+      <h2 class="text-2xl text-cambridge font-semibold">{{events.title}}</h2>
+      <p class="text-md text-ash">{{events.description}}</p>
+
+      <button
+        class="bg-cambridge p-3 rounded-md text-hampton text-sm w-44 gap-1 font-semibold flex justify-center items-center"
+        routerLink="/experience/{{events.id}}"
+      >
+        View Details
+      </button>
+
+    
+    </div>
   </div>
 </section>

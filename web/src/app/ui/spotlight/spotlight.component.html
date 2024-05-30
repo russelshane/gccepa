@@ -7,21 +7,21 @@
       class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory"
     />
     <div class="basis-2/4 flex flex-col gap-4">
-      <span class="text-sm font-semibold text-ash">Gordon College</span>
-      <h1 class="text-3xl font-bold text-cambridge">December Avenue Concert</h1>
+      <span class="text-sm font-semibold text-ash">{{experience.location}}</span>
+      <h1 class="text-3xl font-bold text-cambridge">{{experience.title}}</h1>
       <p class="text-sm text-ash">
-        This extraordinary concert is set to grace the stage in commemoration of
-        the 25th Founding Anniversary of Gordon College.
+        {{experience.description}}
       </p>
       <div class="labels flex gap-2 items-center">
         <lucide-icon
           name="users"
           class="text-gulf size-3.5 font-bold"
         ></lucide-icon>
-        <span class="text-sm text-ash font-semibold">138 attending</span>
+        <span class="text-sm text-ash font-semibold">{{experience.attendance.expected}} attending</span>
       </div>
       <button
         class="bg-ivory p-3 rounded-md text-asphalt text-sm w-44 gap-1 font-semibold flex justify-center items-center"
+        routerLink="/experience/{{experience.id}}"
       >
         View Details
       </button>
