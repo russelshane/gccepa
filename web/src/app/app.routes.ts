@@ -9,6 +9,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
+import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
 
 export const routes: Routes = [
   // Landing page route. Do not add components inside the app
@@ -53,4 +54,8 @@ export const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
   },
+  {
+    path: 'user-settings',
+    component: UserSettingsComponent,
+  }
 ];
