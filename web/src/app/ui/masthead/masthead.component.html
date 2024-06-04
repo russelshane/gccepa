@@ -14,24 +14,23 @@
           class="p-0 m-0 list-none text-asphalt flex gap-3 cursor-pointer font-semibold text-sm"
         >
           <li class="hover:text-eucalyptus"><a routerLink="/">Home</a></li>
-          <li class="hover:text-eucalyptus">
-            <a routerLink="/experiences">Experiences</a>
-          </li>
           <li class="hover:text-eucalyptus" routerLink="/about">About</li>
+          <li class="hover:text-eucalyptus" routerLink="/features">Features</li>
+          <li class="hover:text-eucalyptus" routerLink="/contact">Contact</li>
         </ul>
       </nav>
     </div>
     <div class="flex gap-4 items-center">
       <button
         class="bg-white py-3 px-8 text-asphalt text-sm font-semibold cursor-pointer rounded-md hover:bg-ivory hidden lg:block"
-      >
-        Contact
+        routerLink="sign-in">
+        Login
       </button>
       <button
         class="bg-hampton py-3 px-8 text-asphalt text-sm font-semibold cursor-pointer rounded-md hover:opacity-85 hidden lg:block"
-        (click)="modalService.open('modal-1')"
+        routerLink="sign-up"
       >
-        Get Started
+        Register
       </button>
       <button
         class="bg-white p-3 text-asphalt text-sm font-semibold cursor-pointer rounded-md hover:bg-ivory lg:hidden"
@@ -43,6 +42,7 @@
   </div>
 </header>
 
+
 @if(menuActive){
 <header class="w-full h-full fixed top-0 bottom-0 flex justify-between">
   <nav
@@ -52,12 +52,11 @@
     <ul
       class="p-0 m-0 list-none text-asphalt flex flex-col gap-8 cursor-pointer font-semibold text-2xl"
     >
-      <li class="hover:text-eucalyptus"><a routerLink="/">Home</a></li>
-      <li class="hover:text-eucalyptus">
-        <a routerLink="/experiences">Experiences</a>
-      </li>
-
+      <li class="hover:text-eucalyptus" routerLink="/">Home</li>
       <li class="hover:text-eucalyptus" routerLink="/about">About</li>
+      <li class="hover:text-eucalyptus" routerLink="/features">Features</li>
+      <li class="hover:text-eucalyptus" routerLink="/contact">Contact</li>
+
     </ul>
 
     <span class="text-ash text-md font-medium"
@@ -81,7 +80,6 @@
         </h2>
         <button
           class="bg-hampton w-fit font-semibold text-cambridge py-3 px-6 text-sm rounded-sm"
-          routerLink="sign-in"
         >
           Sign In
         </button>
