@@ -29,13 +29,20 @@
           type="password"
           placeholder="Password"
           class="h-full w-full outline-none text-asphalt text-lg"
-        />
+        />  
       </div>
     </div>
+
+    <!-- Forgot Password -->
+    <button class="w-full flex-col" routerLink="/forgot-password">
+    <p class="text-sm max-w-lg leading-4 font-semibold text-cambridge">
+      Forgot your password?
+    </p></button>
+
     <!-- Continue Button -->
     <button
       class="w-full flex justify-center items-center gap-2 rounded-md bg-hampton p-4 text-lg text-cambridge font-medium"
-      routerLink="/dashboard"
+      routerLink="/logged-in-user"
     >
       Sign In
       <lucide-icon name="move-right" class="text-cambridge"></lucide-icon>

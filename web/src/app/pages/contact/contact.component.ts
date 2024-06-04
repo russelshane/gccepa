@@ -3,9 +3,11 @@ import { RouterLink } from '@angular/router';
 import { MastheadComponent } from '../../ui/masthead/masthead.component';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-contact',
   standalone: true,
-  imports: [MastheadComponent, RouterLink],
-  templateUrl: './about.component.html',
+  imports: [RouterLink,MastheadComponent],
+  templateUrl: './contact.component.html',
 })
-export class AboutComponent {}
+export class ContactComponent {
+
+}

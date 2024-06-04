@@ -14,7 +14,7 @@
            <ul
              class="p-0 m-0 list-none text-asphalt flex items-center gap-6 cursor-pointer font-semibold text-sm"
            >
-             <li routerLink="/" class="hover:text-eucalyptus">
+             <li routerLink="/logged-in-user" class="hover:text-eucalyptus">
                Home
              </li>
              <li class="hover:text-eucalyptus">Experiences</li>
@@ -39,16 +39,87 @@
    <section class="w-full max-w-6xl mx-auto my-10 flex flex-col gap-5">
      <h1 class="text-3xl font-bold text-cambridge">Account</h1>
      <div class="w-full bg-none flex gap-6 h-fit">
-      <div
-       class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory"
-      ></div>
-     </div>
-   
+
+      <div class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory"> 
+        <div class="bg-white p-6 rounded-md">
+          <div class="w-full h-24 items-center justify-between">
+            <h1 class="text-xl font-bold">Nandy Nario</h1>
+            <p class="text-eucalyptus">SID:202211449</p>
+          <button
+          class="text-white text-sm rounded-md px-1 py-1 bg-eucalyptus"
+        >
+          Send Message
+        </button>
+        </div>
+        <h2 class="text-eucalyptus font-semibold">EXPERIENCES</h2>
+        <div>
+
+        </div>
+        <h2 class="text-eucalyptus font-semibold">CROWDPILOT MEMBER SINCE</h2>
+        <p class="text-asphalt">03 APR 2023</p>
+        <div class="flex items-center mb-4">
+          <h2 class="text-lg font-semibold text-eucalyptus mr-2">BADGES</h2>
+          <div class="flex space-x-2 mb-4">
+            <div class="w-16 h-8 rounded-lg bg-eucalyptus"></div>
+            <div class="w-16 h-8 rounded-lg bg-ivory"></div>
+            <div class="w-16 h-8 rounded-lg bg-hampton"></div>
+            <div class="w-16 h-8 rounded-lg bg-eucalyptus"></div>
+          </div>
+        </div>
+          <hr class="mb-4 text-ivory"/>
+          <div class="flex space-x-4">
+            <div class="flex items-center p-4 border rounded-lg dark:border-ivory">
+              <span class="text-zinc-700 dark:text-zinc-300">nandycutie</span>
+            </div>
+            <div class="flex items-center p-4 border rounded-lg dark:border-ivory">
+              <span class="text-zinc-700 dark:text-zinc-300">sam.nario</span>
+            </div>
+          </div>
+        
+      </div>
+      </div>
+
+      <div class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory">
+        <div>
+
+        </div>
+          </div>
+        </div>
+        
      <span class="w-full h-1 bg-backdrop my-10"></span>
      <h1 class="text-3xl font-bold text-cambridge">Security</h1>
      <div class="w-full bg-none flex gap-6 justify-between h-fit">
-       <div
-         class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory"
-       ></div>
+       <div class="basis-2/4 w-2/4 h-80 full block object-cover rounded-md bg-ivory">
+
+      </div>
      </div>
    </section>
+
+   <!-- Footer Component -->
+<hr class="text-eucalyptus">
+
+<footer class="w-full flex justify-center">
+     <div
+     class="py-6 px-6 flex gap-4 max-w-6xl w-full h-24 items-center justify-between xl:px-0"
+   >
+     <div class="flex gap-4 items-center">
+       <img
+         src="https://ik.imagekit.io/drs/crowdpilot/assets/Logo%20Accent%20SVG%20CrowdPilot_9EaH70mmS.svg?updatedAt=1710340228811"
+         alt="Join and create personalized community experiences."
+         class="w-48 object-contain cursor-pointer hover:opacity-75"
+       />
+       
+       <span class="text-eucalyptus"> Copyright © 2024 GCCEPA Crowdpilot </span>
+       <nav class="mx-3 hidden lg:block items-center">
+         <ul
+           class="p-0 m-0 list-none text-asphalt flex gap-3 cursor-pointer font-semibold text-sm"
+         >
+           <li class="hover:text-eucalyptus" routerLink="/logged-in-user">Home<li>
+           <li class="hover:text-eucalyptus" routerLink="">About</li>
+           <li class="hover:text-eucalyptus" routerLink="">Features</li>
+           <li class="hover:text-eucalyptus" routerLink="">Contact</li>
+         </ul>
+       </nav>
+     </div>
+     </div>
+</footer>

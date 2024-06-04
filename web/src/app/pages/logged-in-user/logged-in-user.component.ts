@@ -3,11 +3,11 @@ import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
-  selector: 'app-user-settings',
+  selector: 'app-logged-in-user',
   standalone: true,
-  imports: [LucideAngularModule, RouterLink,],
-  templateUrl: './user-settings.component.html',
+  imports: [RouterLink,LucideAngularModule,],
+  templateUrl: './logged-in-user.component.html',
 })
-export class UserSettingsComponent {
-
+export class LoggedInUserComponent {
+  
 }
