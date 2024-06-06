@@ -5,12 +5,12 @@
   >
     <!-- Text Input  -->
     <div class="flex items-center bg-white rounded-md p-3 gap-2 basis-4/6">
-      <lucide-icon name="calendar-search" class="size-5 text-ash"></lucide-icon>
+      <lucide-icon name="calendar-search" class="size-5 text-muted"></lucide-icon>
       <input
         (keydown)="isSearchActive = true"
         class="text-sm w-full outline-none"
         type="text"
-        placeholder="Search for community programs"
+        placeholder="Search for experiences"
       />
     </div>
     <!-- Search Button -->
@@ -27,22 +27,23 @@
 @if(isSearchActive){
 <div
   (mouseleave)="isSearchActive = false"
-  class="search-modal w-1/2 mx-auto bg-white shadow-sm rounded-br-md rounded-bl-md shadow-muted p-4"
+  class="search-modal w-1/2 mx-auto bg-white shadow-sm rounded-br-md rounded-bl-md shadow-ivory p-4"
 >
   <div class="flex justify-between items-center">
     <div class="flex gap-4 items-center">
-      <div class="w-20 h-20 bg-muted rounded-md"></div>
+      <div class="w-20 h-20 bg-backdrop rounded-md"></div>
       <div class="flex flex-col gap-2">
-        <h1 class="text-cambridge font-semibold text-xl">Film Showing Event</h1>
-        <p>asdf</p>
-        <p>asdf</p>
+        <h1 class="text-cambridge font-semibold text-l">Event Name</h1>
+        <p class="font-regular text-ash text-sm">this is location.</p>
+        <p class="font-regular text-ash text-sm">this is participants.</p>
       </div>
     </div>
     <div class="flex flex-col gap-2 items-center justify-center">
-      <span>MAR</span>
-      <span>23</span>
-      <span>2024</span>
+      <span class="text-cambridge font-medium text-sm">MAR</span>
+      <span class="text-ash font-semibold text-4xl">28</span>
+      <span class="text-eucalyptus font-medium text-sm">2024</span>
     </div>
   </div>
 </div>
+
 }
