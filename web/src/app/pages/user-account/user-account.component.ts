@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-user-account',
   standalone: true,
-  imports: [],
+  imports: [RouterLink,LucideAngularModule,],
   templateUrl: './user-account.component.html',
-  styleUrl: './user-account.component.scss'
 })
 export class UserAccountComponent {
-
+  
 }

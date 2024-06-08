@@ -8,7 +8,7 @@ import { UploadProfileComponent } from './pages/sign-up/upload-profile/upload-pr
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
-import { LoggedInUserComponent } from './pages/logged-in-user/logged-in-user.component';
+import { UserAccountComponent } from './pages/user-account/user-account.component';
 
 export const routes: Routes = [
   // Landing page route. Do not add components inside the app
@@ -50,7 +50,7 @@ export const routes: Routes = [
     component: UserSettingsComponent,
   },
   {
-    path: 'logged-in-user',
-    component: LoggedInUserComponent,
+    path: 'user-account',
+    component: UserAccountComponent,
   }
 ];
