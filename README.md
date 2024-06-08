@@ -21,18 +21,27 @@ Our team decided to take the step further and build our application with feature
 | documentation  | Project documents                              |
 | web            | Angular frontend                               |
 
-# Team
+# Team Structure
 
-| Team Structure                               |                                                                                                                                |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Project Manager                              | Lee Parker D. Parantar                                                                                                         |
-| Project Analyst                              | Marc Ivan S. Rogero<br/> Vince Gabriel D. Torres                                                                               |
-| Product Design                               | Casey D. Nojadera<br />Darsler Russel Shane S. Fortes<br/> Lee Parker D. Parantar<br/>Zanty Ziella M. Alota                    |
-| Technical Lead &<br/> Database Administrator | Darsler Russel Shane S. Fortes                                                                                                 |
-| Database Operations                          | Marc Ivan S. Rogero<br/> Vaughn Gabrielle Tinte                                                                                |
-| Software Development & Testing Team          | Darsler Russel Shane S. Fortes<br/> Jim Dale V. Vinas<br />Nandy Nario<br/> Vaughn Gabrielle Tinte<br/>Vince Gabriel D. Torres |
-| Development Operations                       | Darsler Russel Shane S. Fortes<br />John Aaron Tumangan                                                                        |
-| Documentation Team                           | Lee Parker D. Parantar<br />Eduardo Julius Rosales<br />Ropert B. Socobos                                                      |
+| **Role**                      | **Name**                       |
+|-------------------------------|--------------------------------|
+| Project Manager               | Lee Parker D. Parantar         |
+| Project Analyst               | Marc Ivan S. Rogero            |
+| Product Design                | Lee Parker D. Parantar         |
+| Technical Lead & <br/>
+Database Administrator          | Darsler Russel Shane S. Fortes |
+| Database Operations           | Marc Ivan S. Rogero<br/> 
+                                  Vaughn Gabrielle Tinte         |
+| Developer & Testing Team      | Lee Parker D. Parantar<br/>
+                                  Marc Ivan S. Rogero<br/>
+                                  Vaughn Gabrielle Tinte<br/>
+                                  Vince Gabriel D. Torres<br/>
+                                  Jim Dale V. Viñas              |
+| Documentation Team            | Zanty Ziella M. Alora<br/>
+                                  Nandy Nario<br/>
+                                  Casey D. Nojadera<br/>
+                                  Eduardo Julius Rosales<br/>
+                                  John Aaron Tumangan            |                                                    |
 
 # Documentation
 
