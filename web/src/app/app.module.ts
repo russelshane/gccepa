@@ -5,10 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { ModalComponent } from './ui/modal/modal.component';
 
 @NgModule({
-  declarations: [AppComponent, ModalComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, FormsModule, BrowserAnimationsModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent],
