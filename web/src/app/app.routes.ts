@@ -1,15 +1,12 @@
 import { Routes } from '@angular/router';
 import { LandingComponent } from './pages/landing/landing.component';
-import { ExperiencesComponent } from './pages/experiences/experiences.component';
 import { FeaturesComponent } from './pages/features/features.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { UploadProfileComponent } from './pages/sign-up/upload-profile/upload-profile.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ExperienceComponent } from './pages/experience/experience.component';
 import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
 import { LoggedInUserComponent } from './pages/logged-in-user/logged-in-user.component';
 
@@ -19,14 +16,6 @@ export const routes: Routes = [
   {
     path: '',
     component: LandingComponent,
-  },
-  {
-    path: 'experiences',
-    component: ExperiencesComponent,
-  },
-  {
-    path: 'experience/:id',
-    component: ExperienceComponent,
   },
   {
     path: 'features',
@@ -55,10 +44,6 @@ export const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent,
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
   },
   {
     path: 'user-settings',

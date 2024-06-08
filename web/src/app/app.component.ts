@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ModalService } from './services/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +10,4 @@ import { ModalService } from './services/modal.service';
 export class AppComponent {
   title = 'CrowdPilot: Join and create personalized community experiences';
 
-  constructor(protected modalService: ModalService) {}
 }
