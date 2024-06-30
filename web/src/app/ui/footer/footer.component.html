@@ -1,22 +1,34 @@
 <!-- Footer -->
-<hr class="text-ivory mt-80">
-
-<footer class="w-full flex justify-center">
-     <div
-     class="py-6 px-6 flex gap-4 max-w-6xl w-full h-24 items-center justify-between xl:px-0"
-   >
-     
-       <h1 class="font-extrabold text-cambridge text-4xl">crowdpilot.</h1>
-       <span class="text-ash font-regular text-sm"> Copyright © 2024 GCCEPA Crowdpilot </span>
-       <nav class="mx-3 hidden lg:block">
-        <ul
-          class="p-0 m-0 list-none text-asphalt flex gap-6 cursor-pointer font-medium text-sm"
-        >
-          <li class="hover:text-eucalyptus"><a routerLink="/">Home</a></li>
-          <li class="hover:text-eucalyptus" routerLink="/about">About</li>
-          <li class="hover:text-eucalyptus" routerLink="/features">Features</li>
-          <li class="hover:text-eucalyptus" routerLink="/contact">Contact</li>
-        </ul>
-      </nav>
-     </div>
-</footer>
+ <footer class="flex border-t border-muted">
+  <div class="flex-col flex space-y-2 py-8 px-20">
+    <!--logo-->
+    <div class="text-cambridge font-extrabold text-4xl">crowdpilot.</div>
+    <!--credits-->
+    <div class="text-ash font-normal text-sm">Copyright © 2024 GCCEPA Crowdpilot</div>
+    <!--nav-->
+    <nav class="flex">
+      <ul class="list-none flex text-asphalt cursor-pointer font-medium text-sm space-x-4">
+        <li class="hover:text-eucalyptus"><a routerLink="/">Home</a></li>
+        <li class="hover:text-eucalyptus"><a routerLink="/about">About</a></li>
+        <li class="hover:text-eucalyptus"><a routerLink="/features">Features</a></li>
+        <li class="hover:text-eucalyptus"><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+ </footer>
+<!-- <footer class="w-full h-10 flex justify-center border-muted border-t p-14">
+  <div class="px-6 flex gap-4 max-w-6xl w-full h-10 items-center justify-between xl:px-0">
+    <div class="text-cambridge font-extrabold text-4xl">crowdpilot.
+      <div class="text-ash font-normal text-sm py-3">Copyright © 2024 GCCEPA Crowdpilot
+        <nav class="pt-3 flex place-items-baseline">
+          <ul class="list-none flex gap-6 text-asphalt cursor-pointer font-medium text-sm">
+            <li class="hover:text-eucalyptus"><a routerLink="/">Home</a></li>
+            <li class="hover:text-eucalyptus"><a routerLink="/about">About</a></li>
+            <li class="hover:text-eucalyptus"><a routerLink="/features">Features</a></li>
+            <li class="hover:text-eucalyptus"><a routerLink="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer> -->
