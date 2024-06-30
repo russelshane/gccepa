@@ -9,6 +9,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { LoginComponent } from './pages/login/login.component';
 import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
 import { UserExperiencesComponent } from './pages/user-experiences/user-experiences.component';
+import { UpcomingComponent } from './pages/user-experiences/upcoming/upcoming.component';
 
 export const routes: Routes = [
   // Landing page route. Do not add components inside the app
@@ -52,5 +53,9 @@ export const routes: Routes = [
   {
     path: 'user-experiences',
     component: UserExperiencesComponent,
+  },
+  {
+    path: 'upcoming',
+    component: UpcomingComponent,
   }
 ];
