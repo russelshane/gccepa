@@ -7,7 +7,6 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { UploadProfileComponent } from './pages/sign-up/upload-profile/upload-profile.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { LoginComponent } from './pages/login/login.component';
-import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
 import { UserExperiencesComponent } from './pages/user-experiences/user-experiences.component';
 import { UpcomingComponent } from './pages/user-experiences/upcoming/upcoming.component';
 
@@ -45,10 +44,6 @@ export const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent,
-  },
-  {
-    path: 'user-settings',
-    component: UserSettingsComponent,
   },
   {
     path: 'user-experiences',
