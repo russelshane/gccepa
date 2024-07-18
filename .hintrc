@@ -8,6 +8,13 @@
       {
         "button-name": "off"
       }
+    ],
+    "button-type": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "input-image-alt": "off"
+      }
     ]
   }
 }
