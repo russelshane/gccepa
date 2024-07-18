@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from "../../../ui/header/header.component";
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './admin-dashboard.component.html',
-  styleUrl: './admin-dashboard.component.scss'
 })
 export class AdminDashboardComponent {
 
