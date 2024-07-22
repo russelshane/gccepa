@@ -1,0 +1,337 @@
+/* * {
+    border: 1px solid red;
+} */
+
+.exp-container {
+    width: 100%;
+    height: fit-content;
+
+    .flex-exp-container {
+        display: flex;
+        height: 100%;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .container-1 {
+            height: 100%;
+            width: 735px;
+            border: 1.5px solid rgba(239, 239, 239, 1);
+            background: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .container-2 {
+            height: 100%;
+            width: 402px;
+            border: 1.5px solid rgba(239, 239, 239, 1);
+            background: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+    }
+}
+
+.exp-container-1 {
+    width: 100%;
+    height: fit-content;
+
+    .flex-exp-container-1 {
+
+        height: 100%;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
+
+}
+
+.table-attendance-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+    border: 1.5px solid rgba(239, 239, 239, 1);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 0 10px 10px 10px;
+
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    border: none;
+    border-bottom: 1.5px solid rgba(239, 239, 239, 1);
+}
+
+th,
+td {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+th {
+    color: rgba(33, 70, 62, 1);
+    font-weight: 500;
+
+}
+
+td.date {
+    color: rgba(124, 155, 156, 1);
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #fff;
+    color: #333;
+    border: 1.5px solid rgba(239, 239, 239, 1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    max-width: 250px;
+}
+
+.filter-button,
+.export-button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    padding: 8px 18px 7px 18px;
+    border-radius: 10px;
+    background: #e2e2e2;
+    color: rgba(25, 24, 21, 1);
+
+    p {
+        font-weight: normal;
+    }
+}
+
+.search-button {
+    width: 566px;
+}
+
+.f-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-button:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #fff;
+    border: 1.5px solid rgba(239, 239, 239, 1);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: #666;
+}
+
+.dropdown:hover.dropdown-menu {
+    display: block;
+}
+
+hr {
+    margin: 10px 0 10px 0;
+    border: 1px solid rgba(226, 226, 226, 1);
+}
+
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+
+.icon {
+    margin-left: 10px;
+}
+
+.progress-bar {
+    margin: 20px 0 20px 0;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    /* add this */
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0%;
+    /* set initial width to 0 */
+    border-radius: 15px;
+    transition: width 0.5s;
+    /* add transition for smooth animation */
+    box-sizing: border-box;
+    /* add this */
+    display: flex;
+    /* or use display: flex instead of float: left */
+}
+
+.progress-bar-inner.bsit {
+    background-color: rgba(135, 187, 173, 1);
+    /* BSIT color */
+}
+
+.progress-bar-inner.bsemc {
+    background-color: rgba(227, 212, 170, 1);
+    /* BSEMC color */
+}
+
+.progress-bar-inner.bsCs {
+    background-color: rgba(124, 155, 156, 1);
+    /* BSCS color */
+}
+
+.circle-bsit {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(135, 187, 173, 1);
+    border-radius: 50%;
+}
+
+.circle-bscs {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(124, 155, 156, 1);
+    border-radius: 50%;
+}
+
+.circle-bsemc {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(227, 212, 170, 1);
+    border-radius: 50%;
+}
+
+.label {
+
+    border-radius: 10px;
+    border: 1.5px solid rgba(239, 239, 239, 1);
+    padding: 10px;
+    margin: 0 5px 0 5px;
+    /* existing styles */
+
+    /* add this to align text to the left */
+}
+
+.label span:not(:first-child),
+.group-1 span {
+    font-weight: normal;
+    font-size: 10px;
+}
+
+.group-1 {
+    width: 260px;
+}
+
+.students-ccs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.students-bsit,
+.students-bscs,
+.students-bsemc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 91.44px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(239, 239, 239, 1);
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    top: 3.7px;
+    left: 5px;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3.2px;
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:checked:before {
+    position: absolute;
+    background-color: rgba(33, 70, 62, 1);
+}
+
+.placer {
+    width: 90%;
+}
