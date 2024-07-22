@@ -1,1 +1,322 @@
 <app-header />
+
+<div class="flex-col flex h-screen">
+    <!--Components-->
+    <div class="flex flex-1 gap-16">
+        <!--Sidebar-->
+        <app-sidebar></app-sidebar>
+
+        <!--Main-Component-->
+        <div class="w-full max-w-6xl my-10 flex flex-1 flex-col">
+            <!--Title-->
+            <div class="text-4xl font-bold text-cambridge">Dashboard</div>
+            <div class="exp-container">
+                <div class="flex-exp-container">
+                    <div class="container-1">
+                        <div class="flex flex-row f-container">
+                            <div class="group">
+                                <div class="text-2xl font-bold text-cambridge">Event Attendance Reports</div>
+                                <div class="text-2l text-cambridge">All Experiences</div>
+                            </div>
+
+                            <div class="dropdown">
+                                <button #dropdownButton class="dropdown-button">
+                                    <p class="text-2l font-bold text-cambridge">{{ selectedOption }}</p>
+                                    <i class="fas fa-chevron-down icon"></i>
+                                </button>
+                                <ul #dropdownMenu class="dropdown-menu">
+                                    <li (click)="onSelectOption($event, 'CCS Week 2024'); $event.stopPropagation()">CCS
+                                        Week 2024</li>
+                                    <li (click)="onSelectOption($event, 'IT Olympiad 2024'); $event.stopPropagation()">
+                                        IT Olympiad 2024</li>
+                                    <li
+                                        (click)="onSelectOption($event, 'Community Service 1'); $event.stopPropagation()">
+                                        Community Service 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <!-- add line chart here -->
+                            <div style="display: block;">
+                                <canvas baseChart [data]="barChartData" [options]="barChartOptions"
+                                    [type]="barChartType" #chart></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-2">
+                        <div class="flex flex-row f-container">
+                            <div class="group">
+                                <div class="text-2xl font-bold text-cambridge">Computer Studies Status</div>
+                                <div class="text-2l text-cambridge">{{ selectedOption }}</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-bar-inner bsit" [style.width]="bsitPercent + '%'"></div>
+                            <div class="progress-bar-inner bsemc" [style.width]="bsemcPercent + '%'"></div>
+                            <div class="progress-bar-inner bsCs" [style.width]="bsCsPercent + '%'"></div>
+                        </div>
+
+                        <hr>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex justify-between items-center total">
+                                <span class="text-cambridge font-semibold">Total</span>
+                                <span class="text-cambridge">
+                                    {{ totalCount }}
+                                </span>
+                            </div>
+
+                            <div class="flex justify-between items-center label">
+                                <span class="circle-bsemc"></span>
+                                <div class="flex justify-between items-center group-1">
+                                    <span class="text-cambridge font-semibold">BS Entertainment and Multimedia
+                                        Computing</span>
+                                    <span class="text-cambridge">
+                                        {{ bsemcCount }}
+                                    </span>
+                                </div>
+                                <span class="text-cambridge">
+                                    {{ bsemcPercent.toFixed(0) }}%
+                                </span>
+                            </div>
+                            <div class="flex justify-between items-center label">
+                                <span class="circle-bscs"></span>
+                                <div class="flex justify-between items-center group-1">
+                                    <span class="text-cambridge font-semibold">BS Computer Science</span>
+                                    <span class="text-cambridge">
+                                        {{ bsCsCount }}
+                                    </span>
+                                </div>
+                                <span class="text-cambridge">
+                                    {{ bsCsPercent.toFixed(0) }}%
+                                </span>
+                            </div>
+                            <div class="flex justify-between items-center label">
+                                <span class="circle-bsit"></span>
+                                <div class="flex justify-between items-center group-1">
+                                    <span class="text-cambridge font-semibold">BS Information Technology</span>
+                                    <span class="text-cambridge">
+                                        {{ bsitCount }}
+                                    </span>
+                                </div>
+                                <span class="text-cambridge">
+                                    {{ bsitPercent.toFixed(0) }}%
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="flex justify-between items-center total">
+                                <span class="text-cambridge font-semibold">Total of CSS Students</span>
+                                <span class="text-cambridge">
+                                    995
+                                </span>
+                            </div>
+                            <div class="students-ccs gap-3">
+                                <div class="students-bscs">
+                                    <span class="text-cambridge font-semibold">BSCS</span>
+                                    <span class="text-cambridge">
+                                        348
+                                    </span>
+                                </div>
+                                <div class="students-bsemc">
+                                    <span class="text-cambridge font-semibold">BSEMC</span>
+                                    <span class="text-cambridge">
+                                        234
+                                    </span>
+                                </div>
+                                <div class="students-bsit">
+                                    <span class="text-cambridge font-semibold">BSIT</span>
+                                    <span class="text-cambridge">
+                                        413
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-4xl font-bold text-cambridge">Attendance Record</div>
+            <div class="exp-container-1">
+                <div class="flex-exp-container-1">
+                    <div class="buttons gap-3">
+                        <!--Search-->
+                        <div class="bg-ivory px-2 py-2 rounded-full flex gap-1 search-button">
+                            <input type="image"
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ODY4NjgiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1zZWFyY2giPjxjaXJjbGUgY3g9IjExIiBjeT0iMTEiIHI9IjgiLz48cGF0aCBkPSJtMjEgMjEtNC4zLTQuMyIvPjwvc3ZnPg=="
+                                alt="">
+                            <input type="text" class="bg-ivory placer" placeholder="Search">
+                        </div>
+
+                        <!--filter-->
+                        <button class="filter-button">
+                            <p class="text-2l font-bold text-cambridge">Filter</p>
+                            <i class="fas fa-filter icon"></i>
+                        </button>
+
+                        <!--export-->
+                        <button class="export-button">
+                            <p class="text-2l font-bold text-cambridge">Export</p>
+                            <i class="fas fa-upload icon"></i>
+                        </button>
+                    </div>
+                    <div class="table-attendance-container">
+                        <table class="table-attendance">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" /></th>
+                                    <th>Student ID</th>
+                                    <th>Name</th>
+                                    <th>Course</th>
+                                    <th>Year</th>
+                                    <th>Block</th>
+                                    <th>Event Date</th>
+                                    <th>Event Name</th>
+                                    <th>Participated On</th>
+                                    <th>Approved On</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202110995</td>
+                                    <td>Zanty Ziella M. Alota</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">06 Jun 10:00 AM</td>
+                                    <td>5:30 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202210134</td>
+                                    <td>Vince Gabriel D. Torres</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">08 Jun 12:28 NN</td>
+                                    <td>03:33 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202211757</td>
+                                    <td>John Aaron Tumangan</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">08 Jun 09:55 AM</td>
+                                    <td>01:20 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202210413</td>
+                                    <td>Jim Dale V. Viñas</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>22 Oct 2024</td>
+                                    <td>Siklab 2024</td>
+                                    <td class="date">20 Oct 05:30 AM</td>
+                                    <td>03:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202211745</td>
+                                    <td>Vaughn Gabrielle Tinte</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">07 Jun 09:44 AM</td>
+                                    <td>11:30 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202010989</td>
+                                    <td>Ropert B. Socobos</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>C</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">07 Jun 01:23 PM</td>
+                                    <td>02:08 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202211940</td>
+                                    <td>Eduardo Julius Rosales</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>C</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>Foundation Day</td>
+                                    <td class="date">07 Dec 07:40 AM</td>
+                                    <td>07:19 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202111288</td>
+                                    <td>Marc Ivan S. Rogero</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>C</td>
+                                    <td>08 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">07 Jun 07:03 AM</td>
+                                    <td>11:27 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202211523</td>
+                                    <td>Casey D. Nojadera</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>10 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">09 Jun 11:11 AM</td>
+                                    <td>06:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202211449</td>
+                                    <td>Nandy Nario</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>D</td>
+                                    <td>20 Jun 2024</td>
+                                    <td>Acquaintance Day</td>
+                                    <td class="date">19 Jun 08:20 AM</td>
+                                    <td>01:27 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>202211178</td>
+                                    <td>Darsler Russel Shane S. Fortes</td>
+                                    <td>BSCS</td>
+                                    <td>2</td>
+                                    <td>C</td>
+                                    <td>09 Jun 2024</td>
+                                    <td>CCS Week</td>
+                                    <td class="date">07 Jun 12:00 NN</td>
+                                    <td>3:30 PM</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
